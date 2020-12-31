@@ -1,24 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="grid-container"></div>
+    <button id="btn-color">Change Color</button>
+    <button id="grid-size">Change Grid Size</button>
+    <button id="btn-reset">Reset</button>
     <script>
+      //Creating 16x16 grid
+      const gridContainer = document.querySelector("#grid-container");
+      for (let i = 0; i < 256; i++) {
+        const div = document.createElement("div");
+        div.style.cssText = "width:20px;height:20px;border: 1px solid red;";
+        gridContainer.appendChild(div);
+      }
 
-        for (let i = 0; i < 256; i++){
-            const gridContainer = document.querySelector("#grid-container");
-            const div = document.createElement("div");
-            div.style.cssText = "width:20px;height:20px;border:2px solid red;"
-            gridContainer.appendChild(div); 
+      //Adding mouse over functionality
+      const divNodeList = document.querySelectorAll("#grid-container > div");
+      for (let i = 0; i < divNodeList.length; i++) {
+        divNodeList[i].addEventListener("mouseover", function () {
+          divNodeList[i].style.backgroundColor = "black";
+        });
+      }
+      //Adding reset button
+      const buttonReset = document.querySelector("#btn-reset");
+      buttonReset.addEventListener("click", function () {
+        for (let i = 0; i < divNodeList.length; i++) {
+          divNodeList[i].style.backgroundColor = "white";
         }
+      });
 
+      //Letting user pick color
+      const buttonColor = document.querySelector("#btn-color");
+      buttonColor.addEventListener("click", function () {
+        colorChoice = prompt("Please enter a valid color name".toLowerCase());
+        for (let i = 0; i < divNodeList.length; i++) {
+          divNodeList[i].addEventListener("mouseover", function () {
+            divNodeList[i].style.backgroundColor = colorChoice;
+          });
+        }
+      });
+
+      const gridSize = document.querySelector("#grid-size");
+      gridSize.addEventListener("click", function () {
+        const container = document.querySelector("#grid-container");
+        container.innerHTML = "";
+        let squaresPerSide = prompt("Type in squares per side");
+        let chosenGridSize = squaresPerSide * squaresPerSide;
+        const gridContainer = document.querySelector("#grid-container");
         
-
+        for (let i = 0; i < chosenGridSize; i++) {
+          const div = document.createElement("div");
+          div.style.cssText = "width:20px;height:20px;border: 1px solid red;";
+          gridContainer.appendChild(div);
+        }
+        for (let i = 0; i < chosenGridSize.length; i++) {
+          chosenGridSize[i].addEventListener("mouseover", function () {
+            chosenGridSize[i].style.backgroundColor = "black";
+          });
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
