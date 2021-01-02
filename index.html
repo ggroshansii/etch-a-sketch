@@ -30,8 +30,9 @@
       //Adding reset button
       const buttonReset = document.querySelector("#btn-reset");
       buttonReset.addEventListener("click", function () {
-        for (let i = 0; i < divNodeList.length; i++) {
-          divNodeList[i].style.backgroundColor = "white";
+        const divNodeList = document.querySelectorAll("#grid-container > div");
+            for (let i = 0; i < divNodeList.length; i++) {
+            divNodeList[i].style.backgroundColor = "white";
         }
       });
 
@@ -46,25 +47,42 @@
         }
       });
 
+      eventTarget.addEventListener('keydown', event => {
+        if (event.keyCode == 49) {
+            const divNodeList = document.querySelectorAll("#grid-container > div");
+            colorChoice = prompt("Please enter a valid color name".toLowerCase());
+            for (let i = 0; i < divNodeList.length; i++) {
+            divNodeList[i].addEventListener("mouseover", function () {
+            divNodeList[i].style.backgroundColor = colorChoice;
+          })
+        }
+      }
+    });
+
+
+
       const gridSize = document.querySelector("#grid-size");
       gridSize.addEventListener("click", function () {
         const container = document.querySelector("#grid-container");
         container.innerHTML = "";
         let squaresPerSide = prompt("Type in squares per side");
         let chosenGridSize = squaresPerSide * squaresPerSide;
-        const gridContainer = document.querySelector("#grid-container");
-        
+
         for (let i = 0; i < chosenGridSize; i++) {
           const div = document.createElement("div");
           div.style.cssText = "width:20px;height:20px;border: 1px solid red;";
-          gridContainer.appendChild(div);
+          container.appendChild(div);
         }
-        for (let i = 0; i < chosenGridSize.length; i++) {
-          chosenGridSize[i].addEventListener("mouseover", function () {
-            chosenGridSize[i].style.backgroundColor = "black";
+        for (let i = 0; i < chosenGridSize; i++) {
+          const newDivs = document.querySelectorAll("#grid-container > div");
+          console.log(newDivs)
+          newDivs[i].addEventListener("mouseover", function () {
+          newDivs[i].style.backgroundColor = "black";
           });
         }
-      });
+    });
+    
+
     </script>
   </body>
 </html>
