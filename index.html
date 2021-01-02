@@ -13,7 +13,7 @@
       <div id="grid-container"></div>
       <div id="btn-div">      
         <button id="btn-color" class="btn">Change Color [1]</button>
-        <button id="grid-size" class="btn">Change Grid Size</button>
+        <!-- <button id="grid-size" class="btn">Change Grid Size</button>  -->
         <button id="btn-reset" class="btn">Reset</button>
       </div>
       <div id="circles-div">
@@ -27,7 +27,7 @@
     <script>
       //Creating 16x16 grid
       const gridContainer = document.querySelector("#grid-container");
-      for (let i = 0; i < 256; i++) {
+      for (let i = 0; i < 575; i++) {
         const div = document.createElement("div");
         div.style.cssText = "width:20px;height:20px;border: 1px solid WhiteSmoke;";
         gridContainer.appendChild(div);

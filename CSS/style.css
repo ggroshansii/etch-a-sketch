@@ -5,10 +5,11 @@
 #outer-container {
   border-radius: 2%;
   padding: 20px;
-  width: 100%;
+  width: 50%;
   height: 100%;
   background-color: red;
   padding-bottom: 50px;
+  margin: 0 auto;
 }
 
 #grid-container {
@@ -53,18 +54,18 @@
     background-image: -o-linear-gradient(top, #ff6e6e, red);
     background-image: linear-gradient(to bottom, #ff6e6e, red);
     text-decoration: none;
+    border: 1px solid white;
 }
 
 #circles-div {
   display: flex;
   justify-content: space-between;
-
   margin: 15px 30px 0px 30px;
 }
 
 img {
   border-radius: 100%;
-  width: 20%;
+  width: 120px;
 }
 
 p {
@@ -72,5 +73,20 @@ p {
   align-items: center;
   font-family: "Cabin Sketch", cursive;
   color: white;
-  font-size: 40px;
+  font-size: 35px;
 }
+
+@media only screen and (max-width: 1275px) {
+    body {
+      background-color: lightblue;
+    } img{
+        width: 110px;
+        margin: 10px 20px 0px 20px;
+    } p {
+        font-size: 25px;
+    } #outer-container{
+        padding-bottom: 35px;
+        width: 55%;
+    }
+
+  }
