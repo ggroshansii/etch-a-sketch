@@ -1,11 +1,76 @@
-#grid-container{
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 20px);
-    grid-template-rows: repeat(auto-fit, 20px);
-
+* {
+  box-sizing: border-box;
 }
 
-#grid-container > div{
-   
+#outer-container {
+  border-radius: 2%;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  padding-bottom: 50px;
+}
+
+#grid-container {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20px);
+  grid-template-rows: repeat(auto-fit, 20px);
+  background-color: white;
+}
+
+#btn-div {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.btn {
+    background: #ffffff;
+    background-image: -webkit-linear-gradient(top, #ffffff, white);
+    background-image: -moz-linear-gradient(top, #ffffff, white);
+    background-image: -ms-linear-gradient(top, #ffffff, white);
+    background-image: -o-linear-gradient(top, #ffffff, white);
+    background-image: linear-gradient(to bottom, #ffffff, white);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 10px;
+    font-family: Courier New;
+    color: red;
+    font-size: 12px;
+    padding: 10px 20px 10px 20px;
+    border: solid red 1px;
+    text-decoration: none;
+    margin: 3px;
+}
+
+.btn:hover {
+    background: #ff6e6e;
+    color: white;
+    background-image: -webkit-linear-gradient(top, #ff6e6e, red);
+    background-image: -moz-linear-gradient(top, #ff6e6e, red);
+    background-image: -ms-linear-gradient(top, #ff6e6e, red);
+    background-image: -o-linear-gradient(top, #ff6e6e, red);
+    background-image: linear-gradient(to bottom, #ff6e6e, red);
+    text-decoration: none;
+}
+
+#circles-div {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 15px 30px 0px 30px;
+}
+
+img {
+  border-radius: 100%;
+  width: 20%;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  font-family: "Cabin Sketch", cursive;
+  color: white;
+  font-size: 40px;
 }

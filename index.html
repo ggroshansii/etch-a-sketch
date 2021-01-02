@@ -3,20 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <div id="grid-container"></div>
-    <button id="btn-color">Change Color</button>
-    <button id="grid-size">Change Grid Size</button>
-    <button id="btn-reset">Reset</button>
+    <div id="outer-container">
+      <div id="grid-container"></div>
+      <div id="btn-div">      
+        <button id="btn-color" class="btn">Change Color [1]</button>
+        <button id="grid-size" class="btn">Change Grid Size</button>
+        <button id="btn-reset" class="btn">Reset</button>
+      </div>
+      <div id="circles-div">
+        <img src="images/circle.png" alt="">
+        <p>Etch-a-Sketch</p>
+        <img src="images/circle.png" alt="">
+      </div>
+    </div>
+
+
     <script>
       //Creating 16x16 grid
       const gridContainer = document.querySelector("#grid-container");
       for (let i = 0; i < 256; i++) {
         const div = document.createElement("div");
-        div.style.cssText = "width:20px;height:20px;border: 1px solid red;";
+        div.style.cssText = "width:20px;height:20px;border: 1px solid WhiteSmoke;";
         gridContainer.appendChild(div);
       }
 
@@ -47,7 +60,9 @@
         }
       });
 
-      eventTarget.addEventListener('keydown', event => {
+      
+      document.addEventListener('keydown', event => {
+          console.log(event.keyCode)
         if (event.keyCode == 49) {
             const divNodeList = document.querySelectorAll("#grid-container > div");
             colorChoice = prompt("Please enter a valid color name".toLowerCase());
@@ -60,7 +75,6 @@
     });
 
 
-
       const gridSize = document.querySelector("#grid-size");
       gridSize.addEventListener("click", function () {
         const container = document.querySelector("#grid-container");
@@ -70,7 +84,7 @@
 
         for (let i = 0; i < chosenGridSize; i++) {
           const div = document.createElement("div");
-          div.style.cssText = "width:20px;height:20px;border: 1px solid red;";
+          div.style.cssText = "width:20px;height:20px;border: 1px solid WhiteSmoke;";
           container.appendChild(div);
         }
         for (let i = 0; i < chosenGridSize; i++) {
