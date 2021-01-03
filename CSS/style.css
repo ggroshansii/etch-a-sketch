@@ -4,6 +4,7 @@
 
 html{
     padding-top: 30px;
+    background-color: #FFEBCD;
 }
 
 #outer-container {
@@ -64,7 +65,7 @@ html{
 #circles-div {
   display: flex;
   justify-content: space-between;
-  margin: 15px 30px 0px 30px;
+  margin: 15px 20px 0px 20px;
  
 }
 
@@ -83,7 +84,7 @@ p {
 
 @media only screen and (max-width: 1275px) {
     body {
-      background-color: lightblue;
+      
     } img{
         width: 110px;
         margin: 10px 20px 0px 20px;
@@ -98,7 +99,7 @@ p {
 
   @media only screen and (max-width: 1115px) {
     body {
-        background-color: coral;
+        
       } img{
           width: 85px;
           margin: 10px 20px 0px 20px;
@@ -112,7 +113,7 @@ p {
 
   @media only screen and (max-width: 825px) {
     body {
-        background-color: green;
+        
       } img{
           width: 55px;
           margin: 10px 20px 0px 20px;
@@ -129,7 +130,7 @@ p {
           padding: 0px;
           margin: 0px;
       } body {
-        background-color: yellow;
+
       } img{
           display: none;
       } p {
