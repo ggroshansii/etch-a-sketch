@@ -89,7 +89,7 @@ p {
         width: 110px;
         margin: 10px 20px 0px 20px;
     } p {
-        font-size: 24px;
+        font-size: 26px;
     } #outer-container{
         padding-bottom: 35px;
         width: 50%;
@@ -104,7 +104,7 @@ p {
           width: 85px;
           margin: 10px 20px 0px 20px;
       } p {
-          font-size: 20px;
+          font-size: 22px;
       } #outer-container{
           padding-bottom: 35px;
           width: 60%;
@@ -118,7 +118,7 @@ p {
           width: 55px;
           margin: 10px 20px 0px 20px;
       } p {
-          font-size: 16px;
+          font-size: 18px;
       } #outer-container{
           padding-bottom: 35px;
           width: 70%;
