@@ -2,10 +2,14 @@
   box-sizing: border-box;
 }
 
+html{
+    padding-top: 30px;
+}
+
 #outer-container {
-  border-radius: 2%;
+  border-radius: 15px;
   padding: 20px;
-  width: 50%;
+  width: 45%;
   height: 100%;
   background-color: red;
   padding-bottom: 50px;
@@ -61,6 +65,7 @@
   display: flex;
   justify-content: space-between;
   margin: 15px 30px 0px 30px;
+ 
 }
 
 img {
@@ -73,7 +78,7 @@ p {
   align-items: center;
   font-family: "Cabin Sketch", cursive;
   color: white;
-  font-size: 35px;
+  font-size: 32px;
 }
 
 @media only screen and (max-width: 1275px) {
@@ -83,10 +88,61 @@ p {
         width: 110px;
         margin: 10px 20px 0px 20px;
     } p {
-        font-size: 25px;
+        font-size: 24px;
     } #outer-container{
         padding-bottom: 35px;
-        width: 55%;
+        width: 50%;
     }
 
+  }
+
+  @media only screen and (max-width: 1115px) {
+    body {
+        background-color: coral;
+      } img{
+          width: 85px;
+          margin: 10px 20px 0px 20px;
+      } p {
+          font-size: 20px;
+      } #outer-container{
+          padding-bottom: 35px;
+          width: 60%;
+      }
+  }
+
+  @media only screen and (max-width: 825px) {
+    body {
+        background-color: green;
+      } img{
+          width: 55px;
+          margin: 10px 20px 0px 20px;
+      } p {
+          font-size: 16px;
+      } #outer-container{
+          padding-bottom: 35px;
+          width: 70%;
+      }
+  }
+
+  @media only screen and (max-width: 595px) {
+      html{
+          padding: 0px;
+          margin: 0px;
+      } body {
+        background-color: yellow;
+      } img{
+          display: none;
+      } p {
+          font-size: 26px;
+      } #outer-container{
+          padding-bottom: 35px;
+          width: 95%;
+      } #circles-div {
+        display: flex;
+        justify-content: center;
+      } #grid-container {
+        border: 1px solid black;
+        display: grid;
+        grid-template-rows: repeat(15, 20px);
+      }
   }
